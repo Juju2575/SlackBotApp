@@ -1,4 +1,7 @@
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
+import { readFileSync } from 'fs';
+
+const file = readFileSync('./liste-mots-alphabetique.txt', 'utf-8');
 
 async function handler(_req: Request): Promise<Response> {
   try {
@@ -14,6 +17,11 @@ async function handler(_req: Request): Promise<Response> {
     return new Response("An error occured : ", e);
   }
 }
+
+const genWord = (file : file) => {
+  const wordToFind = "marguerite";
+  return wordToFind;
+};
 
 const extractGuess = async (req: Request) => {
   const slackPayload = await req.formData();
