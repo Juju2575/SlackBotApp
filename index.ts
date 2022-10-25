@@ -1,5 +1,5 @@
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
-import * as fs from “https://deno.land/std/fs/mod.ts”;
+//import * as fs from “https://deno.land/std/fs/mod.ts”;
 
 //const file = readFileSync('./liste-mots-alphabetique.txt', 'utf-8');
 
