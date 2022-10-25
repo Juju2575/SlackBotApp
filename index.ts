@@ -23,8 +23,8 @@ async function handler(_req: Request): Promise<Response> {
   return wordToFind;
 };*/
 
-function genWord(){
-  let word:string = 'paradis'; 
+const genWord(){
+  const word = 'paradis'; 
   return word;
 }
 
