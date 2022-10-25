@@ -24,7 +24,7 @@ async function handler(_req: Request): Promise<Response> {
 };*/
 
 function genWord(){
-  const word = "paradis";
+  let word:string = 'paradis'; 
   return word;
 }
 
