@@ -23,9 +23,8 @@ async function handler(_req: Request): Promise<Response> {
   return wordToFind;
 };*/
 
-const genWord = () => {
-  const word = 'paradis'; 
-  return word;
+const genWord = () => {; 
+  return "paradis";
 }
 
 const extractGuess = async (req: Request) => {
