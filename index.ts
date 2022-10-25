@@ -1,11 +1,11 @@
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
-//import { readFileSync } from 'fs';
+import * as fs from “https://deno.land/std/fs/mod.ts”;
 
-//const file = readFileSync('./liste-mots-alphabetique.txt', 'utf-8');
+const file = readFileSync('./liste-mots-alphabetique.txt', 'utf-8');
 
 async function handler(_req: Request): Promise<Response> {
   try {
-    const wordToFind = genWord("chien");
+    const wordToFind = genWord();
     const guess = await extractGuess(_req);
     const similarityResult = await similarity(guess, wordToFind);
     console.log(
@@ -23,8 +23,8 @@ async function handler(_req: Request): Promise<Response> {
   return wordToFind;
 };*/
 
-function genWord(word: string){
-  const wordToFind = word;
+function genWord(){
+  const wordToFind = "paradis";
   return wordToFind;
 }
 
