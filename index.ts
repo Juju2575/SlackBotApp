@@ -23,7 +23,7 @@ async function handler(_req: Request): Promise<Response> {
   return wordToFind;
 };*/
 
-const genWord(){
+const genWord = () => {
   const word = 'paradis'; 
   return word;
 }
