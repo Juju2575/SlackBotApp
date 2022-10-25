@@ -5,7 +5,7 @@ const file = readFileSync('./liste-mots-alphabetique.txt', 'utf-8');
 
 async function handler(_req: Request): Promise<Response> {
   try {
-    const wordToFind = await genWord();
+    const wordToFind = await genWord("chien");
     const guess = await extractGuess(_req);
     const similarityResult = await similarity(guess, wordToFind);
     console.log(
@@ -18,10 +18,15 @@ async function handler(_req: Request): Promise<Response> {
   }
 }
 
-const genWord = async () => {
+/*const genWord = async () => {
   const wordToFind = "marguerite";
   return wordToFind;
-};
+};*/
+
+function genWord(word: string){
+  const wordToFind = word;
+  return wordToFind;
+}
 
 const extractGuess = async (req: Request) => {
   const slackPayload = await req.formData();
